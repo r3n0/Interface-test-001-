@@ -1,10 +1,10 @@
-let openMainNabBtn = document.getElementById('open-main-nav-bar');
-let closeMainNabBtn = document.getElementById('close-main-nav-bar');
+// let openMainNabBtn = document.getElementById('open-main-nav-bar');
+// let closeMainNabBtn = document.getElementById('close-main-nav-bar');
 let mainMenuModal = document.getElementById('main-nav-bar');
 let modal = document.getElementById('modal-bg');
 
-openMainNabBtn.addEventListener('click', addMainActive);
-closeMainNabBtn.addEventListener('click', removeMainActive);
+// openMainNabBtn.addEventListener('click', addMainActive);
+// closeMainNabBtn.addEventListener('click', removeMainActive);
 
 function addMainActive() {
 	mainMenuModal.classList.add('main-nav-bar--active');
@@ -14,3 +14,11 @@ function removeMainActive() {
 	mainMenuModal.classList.remove('main-nav-bar--active');
 	modal.classList.remove('modal-bg--active');
 }
+
+// Scroll to specific values
+// scrollTo is the same
+window.scroll({
+	top: 2500,
+	left: 0,
+	behavior: 'smooth',
+});

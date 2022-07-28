@@ -14,71 +14,245 @@
 	</head>
 	<body>
 		<header class="">
-			<a class="nav-btn nav-btn__home" href="">
-				<img src="src/svg/ucuenca.svg" alt="" />
-			</a>
-			<a class="nav-btn nav-btn__main" id="open-main-nav-bar" href="#">
+			<div class="nav-btn nav-btn__home btn--blue shadow-right" href="">
+				<svg class="nav-btn__home-icon--desktop">
+					<use xlink:href="/src/svg/svg-defs.svg#ucuenca"></use>
+				</svg>
+				<svg class="nav-btn__home-icon">
+					<use xlink:href="/src/svg/svg-defs.svg#uc"></use>
+				</svg>
+			</div>
+			<div
+				onclick="addMainActive()"
+				class="nav-btn nav-btn__main btn--red shadow-left"
+				id="open-main-nav-bar"
+				href="#"
+			>
 				<i class="fa-solid fa-bars"></i>
-			</a>
-			<a
-				class="nav-btn nav-btn__secondary"
-				id="open-secondary-nav"
+			</div>
+			<div
+				class="nav-btn nav-btn__loggedin btn--blue shadow-left"
+				id="open-loggedin-nav"
 				href="#"
 			>
 				<i class="fa-solid fa-plus"></i>
-			</a>
-			<div class="main-nav-bar" id="main-nav-bar">
+			</div>
+			<!-- main-nav-bar--active -->
+			<div class="main-nav-bar main-nav-bar--active" id="main-nav-bar">
 				<div class="main-nav-bar__bg main-nav-bar__bg-1"></div>
 				<div class="main-nav-bar__bg main-nav-bar__bg-2"></div>
 				<div class="main-nav-bar__bg main-nav-bar__bg-3"></div>
-				<a
-					class="nav-btn nav-btn__cross"
+				<div
+					onclick="removeMainActive()"
+					class="nav-btn nav-btn__cross btn--red shadow-left"
 					id="close-main-nav-bar"
 					href="#"
 				>
 					<i class="fa-solid fa-xmark"></i>
-				</a>
+				</div>
 
-				<section class="main-nav-bar__content">
-					<ul>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>itesdfadfm</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>itsfdasdfem</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>itesdfadfm</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>item</li>
-						<li>itsfdasdfem</li>
-						
-					</ul>
-				</section>
+				<div class="main-nav-bar__content">
+					<section class="cervices-nav" id="main-nav">
+						<ul>
+							<li>
+								<a href="#">Biblioteta</a>
+							</li>
+							<li>
+								<a href="#">Noticias</a>
+							</li>
+							<li>
+								<a href="#">Eventos</a>
+							</li>
+						</ul>
+					</section>
+					<section class="primari-nav" id="main-nav">
+						<ul>
+							<li class="primari-nav__item" id="academia">
+								<h3 class="arrow arrow-down">
+									<a href="#academia">Academia</a>
+								</h3>
+								<div class="primari-nav--sub">
+									<h5>
+										<a href="#">Facultades</a>
+									</h5>
+									<h5>
+										<a href="#">Todos los programas</a>
+									</h5>
+									<h5>
+										<a href="#">Posgrados</a>
+									</h5>
+									<h5>
+										<a href="#">Instituto Tecnológico</a>
+									</h5>
+									<h5>
+										<a href="#">Instituto de idiomas</a>
+									</h5>
+								</div>
+							</li>
+							<li class="primari-nav__item" id="investigacion">
+								<h3 class="arrow arrow-down">
+									<a href="#investigacion"
+										>Investigación & Innovación</a
+									>
+								</h3>
+								<div class="primari-nav--sub">
+									<h5>
+										<a href="#">Departamentos y grupos</a>
+									</h5>
+									<h5>
+										<a href="#">Producción científica</a>
+									</h5>
+									<h5>
+										<a href="#">Divulgación científica</a>
+									</h5>
+									<h5>
+										<a href="#">Gestión de calidad</a>
+									</h5>
+									<h5>
+										<a href="#">Convocatorias & fondos</a>
+									</h5>
+									<h5>
+										<a href="#">Congresos</a>
+									</h5>
+								</div>
+							</li>
+							<li class="primari-nav__item" id="vinculacion">
+								<h3 class="arrow arrow-down">
+									<a href="#vinculacion">Vinculación</a>
+								</h3>
+								<div class="primari-nav--sub">
+									<h5>
+										<a href="#">Gestión de proyectos</a>
+									</h5>
+									<h5>
+										<a href="#">Inserción laboral</a>
+									</h5>
+									<h5>
+										<a href="#">Posgrados</a>
+									</h5>
+									<h5>
+										<a href="#">Practica Laborales</a>
+									</h5>
+									<h5>
+										<a href="#">Congresos</a>
+									</h5>
+								</div>
+							</li>
+							<li class="primari-nav__item" id="servicios">
+								<h3 class="arrow arrow-down">
+									<a href="#servicios">Servicios</a>
+								</h3>
+								<div class="primari-nav--sub">
+									<h5>
+										<a href="#">UCuenca Press</a>
+									</h5>
+									<h5>
+										<a href="#">Dirección de Cultura</a>
+									</h5>
+									<h5>
+										<a href="#"
+											>Consultorios, clínicas y centros</a
+										>
+									</h5>
+									<h5>
+										<a href="#">Beneficios estudiantiles</a>
+									</h5>
+									<h5>
+										<a href="#"
+											>Teatro Carlos Cueva Tamaríz</a
+										>
+									</h5>
+								</div>
+							</li>
+							<li
+								class="primari-nav__item"
+								id="vida-universitaria"
+							>
+								<h3>
+									<a href="#vida-universitaria"
+										>Vida universitaria</a
+									>
+								</h3>
+							</li>
+							<li class="primari-nav__item" id="admision">
+								<h3>
+									<a href="#admision">Admisión y becas</a>
+								</h3>
+							</li>
+						</ul>
+					</section>
+					<section class="news-nav" id="main-nav">
+						<ul>
+							<li><a href="#">Nosotros</a></li>
+							<li><a href="#">Campus</a></li>
+							<li><a href="#">Autoridades</a></li>
+						</ul>
+					</section>
+				</div>
 			</div>
-			<class="secondary-nav"></class=>
 		</header>
-		<div class="modal-bg" id="modal-bg"></div>
+		<!-- modal-bg--active -->
+		<div class="modal-bg modal-bg--active" id="modal-bg"></div>
 		<main>
+			<section>
+				<div class="home-nav">
+					<ul>
+						<li class="home-nav__item arrow arrow-right">
+							<h3>
+								<a href="#">Academia</a>
+							</h3>
+						</li>
+						<li class="home-nav__item arrow arrow-right">
+							<h3>
+								<a href="#">Investigación & Innovación</a>
+							</h3>
+						</li>
+						<li class="home-nav__item arrow arrow-right">
+							<h3>
+								<a href="#">Vinculación</a>
+							</h3>
+						</li>
+						<li class="home-nav__item arrow arrow-right">
+							<h3>
+								<a href="#">Servicios</a>
+							</h3>
+						</li>
+						<li class="home-nav__item arrow arrow-right">
+							<h3>
+								<a href="#">Vida universitaria</a>
+							</h3>
+						</li>
+						<li class="home-nav__item arrow arrow-right">
+							<h3>
+								<a href="#">Admisión y becas</a>
+							</h3>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="main-banner">
+				<div>
+					<h1>
+						El espacio perfecto para estudiar, investigar conectar
+						con la sociedad
+					</h1>
+				</div>
+			</section>
 			<article>
-				<section></section>
+				<section>
+					<h1>h1 headings</h1>
+					<h2>h2 headings</h2>
+					<h3>h3 headings</h3>
+					<h4>h4 headings</h4>
+					<h5>h5 headings</h5>
+					<h6>h6 headings</h6>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Ex, ab quam. Quidem quam totam accusamus dolorum
+						ullam at qui veniam id labore dolore voluptas esse
+						magni, ad molestiae fuga excepturi.
+					</p>
+				</section>
 			</article>
 		</main>
 

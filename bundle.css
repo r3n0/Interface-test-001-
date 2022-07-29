@@ -515,7 +515,6 @@ body {
 }
 .primari-nav__submenu {
   margin-block: 0.5rem;
-  padding-left: 1rem;
 }
 .primari-nav__submenu a {
   opacity: 0.6;
@@ -551,7 +550,7 @@ body {
   color: #EE271C;
 }
 .cervices-nav span {
-  transition: all 0.3s cubic-bezier(0.2, 0.4, 0.5, 0.9);
+  transition: all 0.2s cubic-bezier(0.2, 0.4, 0.5, 0.9);
   font-size: clamp(1.6rem, 5vw, 2.3rem);
   opacity: 0.2;
 }
@@ -570,15 +569,15 @@ body {
 .secondary-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 1rem;
 }
 .secondary-nav a {
-  transition: all 0.3s cubic-bezier(0.2, 0.4, 0.5, 0.9);
+  transition: all 0.2s cubic-bezier(0.2, 0.4, 0.5, 0.9);
   opacity: 0.6;
-  flex-basis: 5rem;
-  text-align: center;
+  flex: 0 1 6rem;
   font-family: Meta-Pro, Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 .secondary-nav a:hover {
   opacity: 1;
@@ -589,36 +588,53 @@ body {
 .accordion {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
+  flex-direction: row-reverse;
 }
-.accordion__panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.2, 0.4, 0.5, 0.9);
+.accordion__plus {
+  border: solid 1px #F1F1F1;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.accordion span {
+.accordion__plus span {
   opacity: 0.3;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.2, 0.4, 0.5, 0.9);
+  transition: all 0.2s cubic-bezier(0.2, 0.4, 0.5, 0.9);
   font-size: 1.5rem;
 }
-.accordion span:hover {
-  transform: scale(1.5);
+.accordion__plus:hover {
+  background-color: #F1F1F1;
+}
+.accordion__plus:hover span {
+  transform: scale(1.2);
   opacity: 1;
   color: #A51008;
+}
+.accordion__panel {
+  padding-left: 3rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.2, 0.4, 0.5, 0.9);
 }
 
-span.plus-active {
-  transform: rotate(45deg) scale(1.5);
+.plus-active {
+  background-color: #F1F1F1;
+}
+.plus-active span {
+  transform: rotate(45deg) scale(1.2);
   color: #A51008;
   opacity: 1;
 }
-span.plus-active:hover {
-  transform: rotate(45deg) scale(1.5);
+.plus-active:hover span {
+  transform: rotate(45deg) scale(1.2);
   color: #EE271C;
 }
 
@@ -694,7 +710,7 @@ span.plus-active:hover {
   cursor: pointer;
   outline: none;
   border: none;
-  transition: all 0.3s cubic-bezier(0.2, 0.4, 0.5, 0.9);
+  transition: all 0.2s cubic-bezier(0.2, 0.4, 0.5, 0.9);
 }
 .btn--blue {
   color: #F1F1F1;
@@ -740,7 +756,7 @@ span.plus-active:hover {
   -webkit-text-decoration: underline 1px #FaFaFa;
           text-decoration: underline 1px #FaFaFa;
   text-underline-offset: var(--offset, 0.2em);
-  transition: all 0.3s cubic-bezier(0.2, 0.4, 0.5, 0.9);
+  transition: all 0.2s cubic-bezier(0.2, 0.4, 0.5, 0.9);
 }
 .underline:hover {
   -webkit-text-decoration: underline 2px #A51008;

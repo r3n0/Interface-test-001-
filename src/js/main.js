@@ -29,14 +29,13 @@ let accordions = document.getElementsByClassName('accordion');
 let i;
 
 for (i = 0; i < accordions.length; i++) {
-	let plus = accordions[i].querySelector('span');
+	let plus = accordions[i].querySelector('.accordion__plus');
 	plus.addEventListener('click', function () {
 		this.classList.toggle('plus-active');
-		console.log(this);
 		for (j = 0; j < accordions.length; j++) {
 			if (accordions[j] != this.parentNode) {
 				accordions[j]
-					.querySelector('span')
+					.querySelector('.accordion__plus')
 					.classList.remove('plus-active');
 				accordions[j].nextElementSibling.style.maxHeight = null;
 			}

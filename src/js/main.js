@@ -22,3 +22,32 @@ window.scroll({
 	left: 0,
 	behavior: 'smooth',
 });
+
+//
+
+let accordions = document.getElementsByClassName('accordion');
+let i;
+
+for (i = 0; i < accordions.length; i++) {
+	let plus = accordions[i].querySelector('span');
+	plus.addEventListener('click', function () {
+		this.classList.toggle('plus-active');
+		console.log(this);
+		for (j = 0; j < accordions.length; j++) {
+			if (accordions[j] != this.parentNode) {
+				accordions[j]
+					.querySelector('span')
+					.classList.remove('plus-active');
+				accordions[j].nextElementSibling.style.maxHeight = null;
+			}
+		}
+
+		let panel = this.parentNode.nextElementSibling;
+
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + 'px';
+		}
+	});
+}

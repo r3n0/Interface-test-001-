@@ -366,6 +366,10 @@ body {
   justify-content: center;
   overflow: hidden;
 }
+.nav-btn span {
+  font-size: 2rem;
+  color: #F1F1F1;
+}
 .nav-btn__home {
   width: 4rem;
   height: 3rem;
@@ -379,12 +383,8 @@ body {
 }
 .nav-btn__main {
   right: 0;
-  width: 4rem;
+  width: 3rem;
   height: 3rem;
-}
-.nav-btn__main i {
-  font-size: 1.5rem;
-  color: #F1F1F1;
 }
 .nav-btn__loggedin {
   top: 4rem;
@@ -392,20 +392,12 @@ body {
   width: 2rem;
   height: 2rem;
 }
-.nav-btn__loggedin i {
-  font-size: 1.2rem;
-  color: #F1F1F1;
-}
 .nav-btn__cross {
   top: 0;
   right: 0;
   width: 3rem;
   height: 3rem;
   z-index: 100;
-}
-.nav-btn__cross i {
-  font-size: 1.4rem;
-  color: #F1F1F1;
 }
 
 @media screen and (min-width: 50rem) {
